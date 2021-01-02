@@ -1,0 +1,10 @@
+#!/usr/bin/with-contenv bash
+
+if [ -d /libtorrent-upgrade ]; then
+  echo "**** Upgrading libtorrent ****"
+  dpkg -i --auto-deconfigure /libtorrent-upgrade/*.deb
+  ldconfig
+  rm -rf /libtorrent-upgrade
+else
+  echo "**** libtorrent already upgraded ****"
+fi

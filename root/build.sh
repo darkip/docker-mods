@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-VERSION=1.2.11
-SOURCE_ARCHIVE_URL=https://github.com/arvidn/libtorrent/releases/download/v1.2.11/libtorrent-rasterbar-1.2.11.tar.gz
+VERSION=1.2.12
+SOURCE_ARCHIVE_URL=https://github.com/arvidn/libtorrent/releases/download/v1.2.12/libtorrent-rasterbar-1.2.12.tar.gz
 ROOT_DIR=/root-layer
 DEB_DIR="${ROOT_DIR}/libtorrent-upgrade"
 DOWNLOAD_DIR="${DEB_DIR}/download"
@@ -11,7 +11,7 @@ SOURCE_DIR="${DEB_DIR}/src"
 echo "=== Installing build requirements ==="
 apt-get update
 apt-get build-dep --no-install-recommends --no-upgrade -y libtorrent-rasterbar9
-apt-get install checkinstall wget
+apt-get install --no-install-recommends --no-upgrade -y checkinstall wget libboost-tools-dev python3-setuptools
 
 echo "=== Setting up directories ==="
 rm -rf "${DEB_DIR}" "${DOWNLOAD_DIR}" "${SOURCE_DIR}"

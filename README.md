@@ -6,4 +6,4 @@ In the `deluge` docker arguments, set an environment variable
 `DOCKER_MODS=ghcr.io/darkip/linuxserver-mods:deluge-libtorrent-upgrade`.
 
 If adding multiple mods, enter them in an array separated by `|`, such as
-`DOCKER_MODS=ghcr.io/darkip/linuxserver-mods:deluge-libtorrent-upgrade|DOCKER_MODS=ghcr.io/darkip/linuxserver-mods::other-mod`
+`DOCKER_MODS=ghcr.io/darkip/linuxserver-mods:deluge-libtorrent-upgrade|DOCKER_MODS=ghcr.io/darkip/linuxserver-mods:other-mod`
